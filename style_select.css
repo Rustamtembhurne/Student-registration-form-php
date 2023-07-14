@@ -1,0 +1,32 @@
+.container_main {
+  position: relative;
+}
+
+.img_container_select {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.img_container_select img {
+  position: absolute;
+  z-index: 1;
+  opacity: 0.9;
+}
+
+div{
+  position: relative;
+  z-index: 2;
+}
+
+div table {
+  position: relative;
+  z-index: 2;
+}
+
+
+.select_anchore_style{
+  text-decoration: none;
+  color: rgb(55, 212, 212);
+}
