@@ -1,7 +1,6 @@
 <?php
 
 include "./connection.php";
-include "./upload_pic.php";
 
 
 ?>
@@ -81,9 +80,23 @@ include "./upload_pic.php";
                     <td><?php echo $fetch['State'] ?></td>
                     <td><?php echo $fetch['Country'] ?></td>
                     <td><?php echo $fetch['Hobbies'] ?></td>
-                    
+
+
+                    <!-- ...........img & pdf................. -->
                     <!-- yaha space mat dena    ( /image_uploaded/_< ) -->
-                    <td> <img src="./image_uploaded/<?php echo $fetch['File']; ?>" width="100px;" height="100px;"></td>
+                    <!-- <td> <img src="./image_uploaded/<?php //echo $fetch['File']; 
+                                                            ?>" width="100px;" height="100px;"></td> -->
+
+                    <td>
+                        <img src="./image_uploaded/<?php echo $fetch['File']; ?>" width="100px" height="100px" alt="YOUR PDF ">
+                        <input name="File" id="fileInput" accept=" application/pdf" value="<?php echo $fetch['File']; ?>">
+                    </td>
+
+
+
+
+
+
 
                     <td><?php echo $fetch['login_time'] ?></td>
                     <td><?php echo $fetch['update_time'] ?></td>

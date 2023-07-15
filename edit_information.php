@@ -110,6 +110,7 @@ if (isset($_GET["edit_id"])) {
 
 
 
+
     // # Previous Data is display query....
     //////////////////////////////////////////////////////////////////////
 
@@ -133,11 +134,14 @@ if (isset($_GET["edit_id"])) {
     // } else {
     //     echo "<script>alert('Your previous Data is NOT display');</script>";
     // }
+
 }
 
-
-
 ?>
+
+
+
+
 
 
 
@@ -165,43 +169,62 @@ if (isset($_GET["edit_id"])) {
 
         <div class="col-md-6">
             <label for="Name" class="form-label ">First Name</label>
-            <input type="text" name="First_Name" value="<?php echo $fetch['First_Name']; ?>" class="form-control text-dark" id="inputEmail4" placeholder="Enter your first name" />
+            <input type="text" name="First_Name" value="<?php echo $fetch['First_Name']; ?>" class="form-control text-dark" id="inputEmail4" placeholder="Enter your first name" required />
         </div>
         <div class="col-md-6">
             <label for="inputPassword4" class="form-label">Last Name</label>
-            <input type="text" name="Last_Name" value="<?php echo $fetch['Last_Name']; ?>" class="form-control" id="inputPassword4" placeholder="Enter your Last name" />
+            <input type="text" name="Last_Name" value="<?php echo $fetch['Last_Name']; ?>" class="form-control" id="inputPassword4" placeholder="Enter your Last name" required />
         </div>
 
+
+        <!-- ========================================================= -->
+
+
+
+
+
+        <!-- # Email Id.... -->
 
         <div class="col-md-6">
             <label for="email" class="form-label ">Email ID</label>
-            <input type="email" name="Email" value="<?php echo $fetch['Email']; ?>" class="form-control " id="inputEmail4" placeholder="Enter your email id" />
+            <input type="email" name="Email" value="<?php echo $fetch['Email']; ?>" class="form-control " id="inputEmail4" placeholder="Enter your email id" required />
         </div>
 
+
+
+        <!-- # Mobile Number.... -->
 
         <div class="col-md-6">
             <label for="number" class="form-label">Mobile Number</label>
-            <input type="number" name="Number" value="<?php echo $fetch['Number']; ?>" class="form-control" id="inputPassword4" placeholder="Enter your mobile number" />
+            <input type="number" name="Number" value="<?php echo $fetch['Number']; ?>" class="form-control" id="inputPassword4" placeholder="Enter your mobile number" required />
         </div>
 
 
 
+
+        <!-- ========================================================= -->
+
+
+
+
+        <!-- # Address......... -->
 
         <div class="col-12">
             <label for="inputAddress" class="form-label">Address</label>
-            <textarea rows="4" cols="20" name="Address" class="form-control" id="inputAddress" placeholder="Enter your address"><?php echo $fetch['Address']; ?></textarea>
+            <textarea rows="4" cols="20" name="Address" class="form-control" id="inputAddress" placeholder="Enter your address" required><?php echo $fetch['Address']; ?></textarea>
         </div>
 
 
 
 
+        <!-- ========================================================= -->
 
 
 
 
-        <!-- Radio Button me [ checked ] used karna padta hai.................................. -->
+        <!-- # Gender............ -->
 
-
+        <!-- Radio Button me [ checked ] used karna padta hai.... -->
         <div class="col-md-6 ">
             <fieldset class="row mb-3 container">
                 <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
@@ -238,36 +261,59 @@ if (isset($_GET["edit_id"])) {
 
 
 
-        <!-- ////////////  # DOB CITY PINCODE  /////////////////// -->
+        <!--# DOB CITY PINCODE..................-->
 
         <div class="col-md-6">
             <label for="inputAddress" class="form-label">DOB </label>
-            <input type="date" name="DOB" value="<?php echo $fetch['DOB']; ?>" class="date_style form-control " id="birthdate" max="2023-12-31">
+            <input type="date" name="DOB" value="<?php echo $fetch['DOB']; ?>" class="date_style form-control " id="birthdate" max="2023-12-31" required>
 
         </div>
 
+
+
+
+        <!-- ========================================================= -->
+
+
+
+
+
+        <!-- # City............. -->
 
         <div class="col-md-6">
             <label for="inputCity" class="form-label">City</label>
-            <input type="text" name="City" value="<?php echo $fetch['City']; ?>" class="form-control" id="inputCity" placeholder="Enter your city name" />
+            <input type="text" name="City" value="<?php echo $fetch['City']; ?>" class="form-control" id="inputCity" placeholder="Enter your city name" required />
         </div>
+
+
+
+        <!-- # Pin Code............. -->
+
         <div class="col-md-6">
             <label for="inputZip" class="form-label">Pin Code</label>
-            <input type="text" name="Pin_code" value="<?php echo $fetch['Pin_code']; ?>" class="form-control" id="inputZip" placeholder="Enter your pin code number" />
+            <input type="text" name="Pin_code" value="<?php echo $fetch['Pin_code']; ?>" class="form-control" id="inputZip" placeholder="Enter your pin code number" required />
         </div>
 
 
+
+
+        <!-- ========================================================= -->
+
+
+
+
+        <!-- # State........... -->
 
         <div class="col-md-8">
             <label for="inputState" class="form-label">State</label>
-            <input type="text" name="State" value="<?php echo $fetch['State']; ?>" class="form-control" id="inputState" placeholder="Enter your state name" />
+            <input type="text" name="State" value="<?php echo $fetch['State']; ?>" class="form-control" id="inputState" placeholder="Enter your state name" required />
 
 
 
 
+            <!-- # Country............. -->
 
-            <!--# Select option me [ selected ] used karna padta hai.. -->
-
+            <!-- Select option me [ selected ] used karna padta hai.. -->
             <div class="col-md-4">
                 <label for="inputState" class="form-label">Country</label>
                 <select id="inputState" name="Country" class="form-select">
@@ -293,19 +339,13 @@ if (isset($_GET["edit_id"])) {
 
 
 
+            <!-- ========================================================= -->
 
 
 
 
 
-
-
-
-
-
-
-
-            <!-- ///////////////////// # Hobbise //////////////// -->
+            <!-- # Hobbise................... -->
 
             <div class="col-md-12">
                 <fieldset class="row mb-3 container">
@@ -355,33 +395,47 @@ if (isset($_GET["edit_id"])) {
 
 
 
-
-
-
-
-
-            <!-- //////////////// # Uploading File ////////////////////////////// -->
+            <!--# Uploading File............... -->
 
             <div class="col-md-12">
                 <fieldset class="row mb-3 container">
-                    <legend class="col-form-label  pt-0">Upload File</legend>
+                    <legend class="col-form-label pt-0">Upload File</legend>
                     <div class="row">
                         <div class="col-sm-10 form-control">
                             <label class="custom-file-label" for="fileInput">Choose File : [ Under 3mb ] JPG, PNG, & PDF Format Only</label>
                             <div class="custom-file">
 
-                                <img src="./image_uploaded/<?php echo $fetch['File']; ?>" width="100px;" height="100px;">
+                                <?php
+                                $previewImage = isset($fetch['File']) ? './image_uploaded/' . $fetch['File'] : '';
+                                ?>
+
+                                <img id="previewImage" src="<?php echo $previewImage; ?>" width="100px" height="100px">
+
+                                <input type="file" name="File" id="fileInput" accept="image/jpeg, image/png, application/pdf" value="<?php echo $previewImage; ?>">
 
 
-                                <input type="file" name="File" class="custom-file-input" id="fileInput" value="">
+                                <embed id="previewPDF" src="#" width="100%" height="300px" style="display: none;">
                                 <button type="submit" name="Upload_file_btn" class="btn btn-primary mt-2" id="uploadButton" required>Upload</button>
                             </div>
                         </div>
+                    </div>
                 </fieldset>
             </div>
 
 
 
+            <!--*******************************************************->
+        
+            <!--  # file ke liye ye dono link requried hi hai... -->
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script src="./file_upload_all_condition2.js"></script>
+
+
+            <!-- **********************************************************-->
+
+            <!-- .....# pic & pdf display javascript code ........ -->
+            <script src="./edit_ display_pic_pdf.js"></script>
+            <!-- .................................................. -->
 
 
 
@@ -389,28 +443,24 @@ if (isset($_GET["edit_id"])) {
 
 
 
+            <!-- ========================================================= -->
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-            <!-- //////////////  # Submit Button ///////////////////////////////// -->
+            <!--# Submit Button........... -->
 
             <div class="col-12 d-flex justify-content-center my-5">
                 <button type="submit" name="Submit" class="btn btn-primary mx-5">Submit</button>
             </div>
             </fieldset>
         </div>
+
+
+
+
+        <!-- ========================================================= -->
+
 
 
 
@@ -421,26 +471,12 @@ if (isset($_GET["edit_id"])) {
 
 
 
-    <!-- ///////////////////////////////////////////////////////////////// -->
+
+
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-
-
-
-
-
-
-    <!-- ///////////////////////////////////////////////////////////////-->
-
-    <!--  # file ke liye ye dono link requried hi hai... -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="./file_upload_all_condition2.js"></script>
-
-
-    <!-- /////////////////////////////////////////////////////////////// -->
-
-
-
 
 </body>
 
