@@ -165,15 +165,33 @@ if (isset($_GET["edit_id"])) {
 
     <form class="row g-3 container text-white font-weight-bold " action=" " method="POST" enctype="multipart/form-data" style="margin: auto; width: 750px;">
 
-        <h2 class="d-flex justify-content-center text-warning my-5 "> ꧁༒☬ STUDENT REGISTRATION FORM ☬༒꧂</h2>
 
-        <div class="col-md-6">
-            <label for="Name" class="form-label ">First Name</label>
-            <input type="text" name="First_Name" value="<?php echo $fetch['First_Name']; ?>" class="form-control text-dark" id="inputEmail4" placeholder="Enter your first name" required />
+
+        <!---=====================Heading==============================-->
+
+
+        <div class="row container">
+
+            <h3 class=" container-fluid d-flex justify-content-center text-warning my-5 "> ꧁༒☬ STUDENT REGISTRATION FORM ☬༒꧂</h3>
+
         </div>
-        <div class="col-md-6">
-            <label for="inputPassword4" class="form-label">Last Name</label>
-            <input type="text" name="Last_Name" value="<?php echo $fetch['Last_Name']; ?>" class="form-control" id="inputPassword4" placeholder="Enter your Last name" required />
+
+
+
+
+        <!-- ===========First Name & Last Name======================= -->
+
+        <div class="row my-2">
+
+            <div class="col-6">
+                <label for="Name" class="form-label ">First Name</label>
+                <input type="text" name="First_Name" value="<?php echo $fetch['First_Name']; ?>" class="form-control text-dark" id="inputEmail4" placeholder="Enter your first name" required />
+            </div>
+            <div class="col-6">
+                <label for="inputPassword4" class="form-label">Last Name</label>
+                <input type="text" name="Last_Name" value="<?php echo $fetch['Last_Name']; ?>" class="form-control" id="inputPassword4" placeholder="Enter your Last name" required />
+            </div>
+
         </div>
 
 
@@ -182,36 +200,23 @@ if (isset($_GET["edit_id"])) {
 
 
 
+        <div class="row my-2">
 
-        <!-- # Email Id.... -->
-
-        <div class="col-md-6">
-            <label for="email" class="form-label ">Email ID</label>
-            <input type="email" name="Email" value="<?php echo $fetch['Email']; ?>" class="form-control " id="inputEmail4" placeholder="Enter your email id" required />
-        </div>
-
-
-
-        <!-- # Mobile Number.... -->
-
-        <div class="col-md-6">
-            <label for="number" class="form-label">Mobile Number</label>
-            <input type="number" name="Number" value="<?php echo $fetch['Number']; ?>" class="form-control" id="inputPassword4" placeholder="Enter your mobile number" required />
-        </div>
+            <!-- # Email Id.... -->
+            <div class="col-6">
+                <label for="email" class="form-label ">Email ID</label>
+                <input type="email" name="Email" value="<?php echo $fetch['Email']; ?>" class="form-control " id="inputEmail4" placeholder="Enter your email id" required />
+            </div>
 
 
 
+            <!-- # Mobile Number.... -->
 
-        <!-- ========================================================= -->
+            <div class="col-6">
+                <label for="number" class="form-label">Mobile Number</label>
+                <input type="number" name="Number" value="<?php echo $fetch['Number']; ?>" class="form-control" id="inputPassword4" placeholder="Enter your mobile number" required />
+            </div>
 
-
-
-
-        <!-- # Address......... -->
-
-        <div class="col-12">
-            <label for="inputAddress" class="form-label">Address</label>
-            <textarea rows="4" cols="20" name="Address" class="form-control" id="inputAddress" placeholder="Enter your address" required><?php echo $fetch['Address']; ?></textarea>
         </div>
 
 
@@ -221,77 +226,71 @@ if (isset($_GET["edit_id"])) {
 
 
 
+        <div class="row my-2">
 
-        <!-- # Gender............ -->
+            <!-- # Address......... -->
+            <div class="col-12">
+                <label for="inputAddress" class="form-label">Address</label>
+                <textarea rows="4" cols="20" name="Address" class="form-control" id="inputAddress" placeholder="Enter your address" required><?php echo $fetch['Address']; ?></textarea>
+            </div>
 
-        <!-- Radio Button me [ checked ] used karna padta hai.... -->
-        <div class="col-md-6 ">
-            <fieldset class="row mb-3 container">
-                <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
-                <div class="row">
-                    <div class="col-sm-10 form-control">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="Gender" id="gridRadios1" value="Male" <?php if ($fetch['Gender'] == "Male") {
-                                                                                                                            echo "checked";
-                                                                                                                        } ?>>
-                            <label class="form-check-label" for="gridRadios1">Male</label>
-                        </div>
+        </div>
 
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="Gender" id="gridRadios2" value="Female" <?php if ($fetch['Gender'] == "Female") {
-                                                                                                                            echo "checked";
-                                                                                                                        } ?>>
-                            <label class="form-check-label" for="gridRadios2">Female</label>
-                        </div>
 
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="Gender" id="gridRadios3" value="Other" <?php if ($fetch['Gender'] == "Other") {
-                                                                                                                            echo "checked";
-                                                                                                                        } ?>>
-                            <label class="form-check-label" for="gridRadios3">Other</label>
+
+
+        <!-- ========================================================= -->
+
+
+
+        <div class="row my-2">
+
+            <!-- # Gender............ -->
+            <!-- Radio Button me [ checked ] used karna padta hai.... -->
+            <div class="col-7">
+                <fieldset class=" container">
+                    <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
+                    <div class="row">
+                        <div class="col-sm-10 form-control">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="Gender" id="gridRadios1" value="Male" <?php if ($fetch['Gender'] == "Male") {
+                                                                                                                                echo "checked";
+                                                                                                                            } ?>>
+                                <label class="form-check-label" for="gridRadios1">Male</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="Gender" id="gridRadios2" value="Female" <?php if ($fetch['Gender'] == "Female") {
+                                                                                                                                echo "checked";
+                                                                                                                            } ?>>
+                                <label class="form-check-label" for="gridRadios2">Female</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="Gender" id="gridRadios3" value="Other" <?php if ($fetch['Gender'] == "Other") {
+                                                                                                                                echo "checked";
+                                                                                                                            } ?>>
+                                <label class="form-check-label" for="gridRadios3">Other</label>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-            </fieldset>
+                </fieldset>
 
-        </div>
-
-
-
-
-
-        <!--# DOB CITY PINCODE..................-->
-
-        <div class="col-md-6">
-            <label for="inputAddress" class="form-label">DOB </label>
-            <input type="date" name="DOB" value="<?php echo $fetch['DOB']; ?>" class="date_style form-control " id="birthdate" max="2023-12-31" required>
-
-        </div>
-
-
-
-
-        <!-- ========================================================= -->
+            </div>
 
 
 
 
 
-        <!-- # City............. -->
+            <!--# DOB CITY PINCODE..................-->
 
-        <div class="col-md-6">
-            <label for="inputCity" class="form-label">City</label>
-            <input type="text" name="City" value="<?php echo $fetch['City']; ?>" class="form-control" id="inputCity" placeholder="Enter your city name" required />
-        </div>
+            <div class="col-5">
+                <label for="inputAddress" class="form-label">DOB </label>
+                <input type="date" name="DOB" value="<?php echo $fetch['DOB']; ?>" class="date_style form-control " id="birthdate" max="2023-12-31" required>
 
+            </div>
 
-
-        <!-- # Pin Code............. -->
-
-        <div class="col-md-6">
-            <label for="inputZip" class="form-label">Pin Code</label>
-            <input type="text" name="Pin_code" value="<?php echo $fetch['Pin_code']; ?>" class="form-control" id="inputZip" placeholder="Enter your pin code number" required />
         </div>
 
 
@@ -302,19 +301,46 @@ if (isset($_GET["edit_id"])) {
 
 
 
-        <!-- # State........... -->
+        <div class="row my-2">
 
-        <div class="col-md-8">
-            <label for="inputState" class="form-label">State</label>
-            <input type="text" name="State" value="<?php echo $fetch['State']; ?>" class="form-control" id="inputState" placeholder="Enter your state name" required />
+            <!-- # City............. -->
+
+            <div class="col-7">
+                <label for="inputCity" class="form-label">City</label>
+                <input type="text" name="City" value="<?php echo $fetch['City']; ?>" class="form-control" id="inputCity" placeholder="Enter your city name" required />
+            </div>
 
 
 
+            <!-- # Pin Code............. -->
+
+            <div class="col-5">
+                <label for="inputZip" class="form-label">Pin Code</label>
+                <input type="text" name="Pin_code" value="<?php echo $fetch['Pin_code']; ?>" class="form-control" id="inputZip" placeholder="Enter your pin code number" required />
+            </div>
+
+        </div>
+
+
+
+
+        <!-- ========================================================= -->
+
+
+        <div class="row my-2">
+
+            <!-- # State........... -->
+            <div class="col-7">
+                <label for="inputState" class="form-label">State</label>
+                <input type="text" name="State" value="<?php echo $fetch['State']; ?>" class="form-control" id="inputState" placeholder="Enter your state name" required />
+
+
+            </div>
 
             <!-- # Country............. -->
 
             <!-- Select option me [ selected ] used karna padta hai.. -->
-            <div class="col-md-4">
+            <div class="col-5">
                 <label for="inputState" class="form-label">Country</label>
                 <select id="inputState" name="Country" class="form-select">
                     <option selected>Choose your country...</option>
@@ -337,18 +363,21 @@ if (isset($_GET["edit_id"])) {
             </div>
 
 
-
-
-            <!-- ========================================================= -->
+        </div>
 
 
 
+        <!-- ========================================================= -->
+
+
+
+        <div class="row my-2">
 
 
             <!-- # Hobbise................... -->
 
             <div class="col-md-12">
-                <fieldset class="row mb-3 container">
+                <fieldset class="container">
                     <legend class="col-form-label col-sm-2 pt-0">Hobbies</legend>
                     <div class="row">
                         <div class="col-sm-10 form-control">
@@ -390,15 +419,18 @@ if (isset($_GET["edit_id"])) {
                 </fieldset>
             </div>
 
+        </div>
 
 
 
 
+
+        <div class="row my-2">
 
             <!--# Uploading File............... -->
 
             <div class="col-md-12">
-                <fieldset class="row mb-3 container">
+                <fieldset class="container">
                     <legend class="col-form-label pt-0">Upload File</legend>
                     <div class="row">
                         <div class="col-sm-10 form-control">
@@ -415,46 +447,32 @@ if (isset($_GET["edit_id"])) {
 
 
                                 <embed id="previewPDF" src="#" width="100%" height="300px" style="display: none;">
-                                <button type="submit" name="Upload_file_btn" class="btn btn-primary mt-2" id="uploadButton" required>Upload</button>
+                                <button type="submit" name="Upload_file_btn" class="btn btn-info mt-2" id="uploadButton" required>Upload</button>
                             </div>
                         </div>
                     </div>
                 </fieldset>
             </div>
 
+        </div>
 
 
-            <!--*******************************************************->
+
+        <!--*******************************************************->
         
             <!--  # file ke liye ye dono link requried hi hai... -->
-            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-            <script src="./file_upload_all_condition2.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="./file_upload_all_condition2.js"></script>
 
 
-            <!-- **********************************************************-->
+        <!-- **********************************************************-->
 
-            <!-- .....# pic & pdf display javascript code ........ -->
-            <script src="./edit_ display_pic_pdf.js"></script>
-            <!-- .................................................. -->
-
-
-
+        <!-- .....# pic & pdf display javascript code ........ -->
+        <script src="./edit_ display_pic_pdf.js"></script>
+        <!-- .................................................. -->
 
 
 
-
-            <!-- ========================================================= -->
-
-
-
-
-            <!--# Submit Button........... -->
-
-            <div class="col-12 d-flex justify-content-center my-5">
-                <button type="submit" name="Submit" class="btn btn-primary mx-5">Submit</button>
-            </div>
-            </fieldset>
-        </div>
 
 
 
@@ -464,13 +482,19 @@ if (isset($_GET["edit_id"])) {
 
 
 
+        <!--# Submit Button........... -->
+
+        <div class="col-12 d-flex justify-content-center my-5">
+            <button type="submit" name="Submit" class="btn btn-primary mx-5">Submit</button>
+        </div>
+        </fieldset>
+        </div>
+
+
+
+
+
     </form>
-
-
-
-
-
-
 
 
 

@@ -24,7 +24,7 @@ include "./connection.php";
 <body>
 
     <div class="img_container_select">
-        <img src="./img/white (9).jpg" alt="home pic" />
+        <img src="./img/insert-data.jpg" alt="home pic" />
     </div>
     <div class="my-5 table_div" align="center">
         <h1>STUDENT INFORMATION </h1>
@@ -83,11 +83,8 @@ include "./connection.php";
 
 
                     <!-- ...........img & pdf................. -->
-                    <!-- yaha space mat dena    ( /image_uploaded/_< ) -->
-                    <!-- <td> <img src="./image_uploaded/<?php //echo $fetch['File']; 
-                                                            ?>" width="100px;" height="100px;"></td> -->
-
                     <td>
+                        <!-- yaha space mat dena    ( /image_uploaded/_< ) -->
                         <img src="./image_uploaded/<?php echo $fetch['File']; ?>" width="100px" height="100px" alt="YOUR PDF ">
                         <input name="File" id="fileInput" accept=" application/pdf" value="<?php echo $fetch['File']; ?>">
                     </td>
