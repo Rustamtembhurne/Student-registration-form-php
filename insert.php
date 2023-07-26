@@ -56,19 +56,19 @@ if (isset($_POST['Submit'])) {
         if ($_FILES['File']['size'] > 3 * 1024 * 1024) {   // 3mb
             echo "<script>
             alert('File size is too large.');
-            window.location.href='registration_form.php';
+            window.location.href='index.php';
             </script>";
         }
         // else if (file_exists($target)) {
         //     echo "<script>
         //     alert('File already exists.');
-        //     window.location.href='registration_form.php';
+        //     window.location.href='index.php';
         //     </script>";
         // }
         else if ($fileupload != "jpg" && $fileupload != "pdf") {
             echo "<script>
             alert('File must be in JPG or PDF format.');
-            window.location.href='registration_form.php';
+            window.location.href='index.php';
             </script>";
         } else {
             if (move_uploaded_file($_FILES['File']['tmp_name'], $target)) {

@@ -17,7 +17,7 @@ $(document).ready(function() {
       // Check if the file size exceeds the limit
       if (fileSize > fileSizeLimit) {
         e.preventDefault(); // Prevent the form from submitting
-        alert('File size exceeds the limit. Please choose a file under 2MB.');
+        alert('File size exceeds the limit. Please choose a file under 3MB.');
       } else if (!fileUpload.match(/\.(jpg|pdf)$/i)) {
         e.preventDefault(); // Prevent the form from submitting
         alert('Only JPG and PDF formats are allowed.');

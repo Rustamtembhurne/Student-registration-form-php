@@ -2,7 +2,7 @@
 include "./connection.php";
 
 
-
+// Time & Date 
 date_default_timezone_set('Asia/Kolkata');
 $time = date('H:i:sa');    // a ---> am / pm 
 
@@ -37,6 +37,7 @@ if (isset($_GET["edit_id"])) {
         $file = $_FILES['File']['name'];
         $target = $target_path . basename($_FILES['File']['name']);
         $fileupload = strtolower(pathinfo($target, PATHINFO_EXTENSION));    // jg & pdf format
+
 
         // # Time...
         //////////////////////////////////////////////////////////////////
@@ -74,7 +75,7 @@ if (isset($_GET["edit_id"])) {
                 // else if (file_exists($target)) {
                 //     echo "<script>
                 //     alert('File already exists.');
-                //     window.location.href='registration_form.php';
+                //     window.location.href='index.php';
                 //     </script>";
                 // }
                 else if ($fileupload != "jpg" && $fileupload != "pdf") {
@@ -85,7 +86,7 @@ if (isset($_GET["edit_id"])) {
                 } else {
                     if (move_uploaded_file($_FILES['File']['tmp_name'], $target)) {
                         echo "<script>
-                        alert('Your Data Inserted & Updated Successfully'); 
+                        alert('Your Data is Updated Successfully'); 
                         window.location.href='select.php';
                         </script>";
                     } else {

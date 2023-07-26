@@ -37,7 +37,7 @@ if (isset($_POST['Upload_file_btn'])) {
             if (move_uploaded_file($_FILES['File']['tmp_name'], $target)) {
                 echo "<script>
                 alert('File uploaded successfully.');
-                window.location.href='registration_form.php';
+                window.location.href='index.php';
                 </script>";
             } else {
                 echo "<script>
