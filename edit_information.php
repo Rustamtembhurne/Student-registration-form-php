@@ -429,6 +429,7 @@ if (isset($_GET["edit_id"])) {
         <div class="row my-2">
 
             <!--# Uploading File............... -->
+            <!--# Uploading File............... -->
 
             <div class="col-md-12">
                 <fieldset class="container">
