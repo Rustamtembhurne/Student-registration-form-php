@@ -99,7 +99,7 @@ include "./connection.php";
                     <td><?php echo $fetch['update_time'] ?></td>
 
 
-                    <td> <a href="./edit_information.php ? edit_id=<?php echo $fetch['id'] ?>">Edit</a> / <a href="./delete_information.php  ? delete_id=<?php echo $fetch['id'] ?>">Delete</a> </td>
+                    <td> <a href="./edit_information.php ? edit_id=<?php echo $fetch['id'] ?>">Edit</a> / <a href="./delete_information.php ? delete_id=<?php echo $fetch['id'] ?>">Delete</a> </td>
                 </tr>
 
             <?php
