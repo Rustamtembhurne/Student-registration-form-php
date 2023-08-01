@@ -28,7 +28,7 @@ include "./connection.php";
     </div>
     <div class="my-5 table_div" align="center">
         <h1>STUDENT INFORMATION </h1>
-        <a href="./index.php" class="select_anchore_style">ADD DATA</a>
+        <a href="./Registration_page.php" class="select_anchore_style">ADD DATA</a>
 
         <table border="5" cellspacing="5">
             <tr>

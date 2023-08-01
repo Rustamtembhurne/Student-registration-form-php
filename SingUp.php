@@ -1,40 +1,29 @@
 <?php
-
-error_reporting(0);  // is se error hi nahi dikhte hai...
-
 include "./Registration/connection.php";
 
 
 if (isset($_POST['Submit'])) {
 
-    $New_name = $_POST['username'];
-    $New_pass = $_POST['password'];
-
-    $select = "SELECT `username`, `password` FROM `login_page` WHERE `username`='$New_name' AND `password`='$New_pass' ";
-
-    $query = mysqli_query($conn, $select);
-
-    $fetch = mysqli_fetch_assoc($query);
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
 
+    $insert = "INSERT INTO `login_page`(`username`, `password`) VALUES ('$username','$password')";
 
-    $Old_username = $fetch['username'];
-    $Old_password = $fetch['password'];
+    $query = mysqli_query($conn, $insert);
 
 
-    // Match Old and New username and password
-    if ($Old_username == $New_name && $Old_password == $New_pass) {
-
-        echo "<script>alert('Data is match');
-         window.location.href='Registration/Registration_page.php';</script>";
-        // header('location:welcome.php');
+    if ($query) {
+        echo "<script>alert('Data is enter');
+         window.location.href='index.php';</script>";
     } else {
-        echo "<script>alert('First SingUp then login');
+        echo "<script>alert('Data is not enter');
          window.location.href='SingUp.php';</script>";
     }
 }
 
 ?>
+
 
 
 
@@ -50,7 +39,6 @@ if (isset($_POST['Submit'])) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
     <link rel="stylesheet" href="./style_homepage.css" />
-
 
     <style>
         .input_group1 {
@@ -83,15 +71,13 @@ if (isset($_POST['Submit'])) {
             /* Text color */
         }
     </style>
-
-
 </head>
 
 <body>
-    <form action="" method="POST">
-        <div class="login_form_container">
+    <div class="login_form_container">
+        <form action="" method="POST">
             <div class="login_form">
-                <h2>Login</h2>
+                <h2>SingUp</h2>
                 <div class="input_group">
                     <i class="fa fa-user"></i>
                     <input type="text" name="username" placeholder="Username" class="input_text" autocomplete="off" />
@@ -100,24 +86,15 @@ if (isset($_POST['Submit'])) {
                     <i class="fa fa-unlock-alt"></i>
                     <input type="password" name="password" placeholder="Password" class="input_text" autocomplete="off" />
                 </div>
-
+                
                 <div class="input_group" id="login_button">
-                    <button type="submit" name="Submit" class="custom_button">Submit</button>
+                    <button type="submit" name="Submit" class="custom_button">SingUp</button>
                 </div>
 
-
-                <div class="fotter">
-                    <a>Forgot Password ?</a>
-                    <a>SingUp</a>
-                </div>
             </div>
 
-        </div>
-    </form>
-
-
-
-
+        </form>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="./script_homepage.js"></script>

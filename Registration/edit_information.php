@@ -75,7 +75,7 @@ if (isset($_GET["edit_id"])) {
                 // else if (file_exists($target)) {
                 //     echo "<script>
                 //     alert('File already exists.');
-                //     window.location.href='index.php';
+                //     window.location.href='Registration_page.php';
                 //     </script>";
                 // }
                 else if ($fileupload != "jpg" && $fileupload != "pdf") {
